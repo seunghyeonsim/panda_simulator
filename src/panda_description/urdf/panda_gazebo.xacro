@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="panda">
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+
+
+            <!-- <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type> -->
+            <parameters>$(find panda_control)/config/panda_controller.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+
+</robot>
